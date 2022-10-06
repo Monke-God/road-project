@@ -205,8 +205,6 @@ html {
     background-color: var(--white-color);
     border-radius: 0.3rem;
     position: relative;
-    z-index: 10;
-    opacity: .9;
 }
 
 .tour-name {
@@ -244,8 +242,6 @@ html {
     border-radius: 0.3rem;
     box-shadow: 0 2rem 4rem var(--lightgrey-color);
     flex-direction: column;
-    transform: translateZ(-5rem) translateX(3rem);
-    opacity: .5;
 }
 
 .tour-price {
@@ -281,5 +277,23 @@ html {
     letter-spacing: .2rem;
     cursor: pointer;
 }
+
+
+.active {
+    z-index: 1;
+    opacity: 1;
+    transform: translateZ(0) translateX(0);
+    transition: transform 150ms, opacity 150ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
+.inactive {
+    z-index: 0;
+    opacity: 0.5;
+    transform: translateZ(-5rem) translateX(3rem);
+    transition: transform 150ms, opacity 150ms;
+    transition-timing-function: ease-in-out, ease-in-out;
+}
+
 
 /* End of Popular tours */
