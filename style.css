@@ -11,6 +11,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -64,12 +65,15 @@ html {
 
 .navbar-wrapper {
     width: 100vw;
-    height: 100vh;
+    height: 25rem;
     background-color: rgba(255, 255, 255, .7);
     position: fixed;
+    top: -100%;
     left: 0;
-    bottom: -100%;
-    opacity: 0;
+    transition: top 420ms;
+    transition-timing-function: ease-in;
+    /* bottom: -100%; */
+    opacity: 1;
     z-index: 300;
     padding: 3.5rem 5.5rem 3.5rem 3.5rem;
 }
@@ -80,6 +84,12 @@ html {
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .3)), url(images/navbar-bg.jpg) center no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.hamMenu {
+    top: 0;
+    transition: top 420ms;
+    transition-timing-function: cubic-bezier(0.39, 0.53, 0, 1.08);
 }
 
 .close-navbar-icon {
@@ -116,7 +126,7 @@ html {
     opacity: 0.8;
     transition: all .3s;
     position: relative;
-    top: -100%;
+    /* top: -100%; */
 }
 
 .nav-link:hover {
