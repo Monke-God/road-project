@@ -1,19 +1,22 @@
 // ---------------------------- nav-bar -----------------------------------------
 const hamOpen = document.querySelector(".open-navbar-icon");
-console.log(hamOpen);
 hamOpen.addEventListener("click", (e)=>{
-    var menu = document.querySelector(".navbar-wrapper");
+    var menu = document.querySelector(".container");
     menu.classList.add("hamMenu");
-    hamOpen.style.visibility = "hidden";
 })
 
 const hamClose = document.querySelector(".close-navbar-icon");
-console.log(hamClose);
 hamClose.addEventListener("click", (e)=>{
-    var menu = document.querySelector(".navbar-wrapper");
+    var menu = document.querySelector(".container");
     menu.classList.remove("hamMenu");
-    hamOpen.style.visibility = "visible";
 })
+
+const items = document.querySelectorAll(".nav-link");
+items.forEach((items)=>{
+    items.addEventListener("click", ()=>{
+       document.querySelector(".container").classList.remove("hamMenu");
+    });
+});
 
 // ------------------------ card button --------------------------------------
 const btn = document.querySelectorAll(".card");
