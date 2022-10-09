@@ -79,7 +79,7 @@ html {
     transition-timing-function: ease-in;
     opacity: 1;
     z-index: 300;
-    padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+    padding: 3.5rem 3.5rem 3.5rem 3.5rem;
 }
 
 .hamMenu .navbar-wrapper {
@@ -658,3 +658,121 @@ html {
 }
 
 /* End of Footer */
+
+@media (max-width: 1250px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin: 3rem 0;
+    }
+
+    .story-bg {
+        width: 85%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    .heading {
+        font-size: 6rem;
+    }
+
+    .header-paragraph {
+        font-size: 2.5rem;
+    }
+
+    .story-bg {
+        transform: skewX(0);
+    }
+
+    .story {
+        transform: skewX(0);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story-image {
+        margin-bottom: 3rem;
+    }
+
+    .footer-link {
+        padding: .3rem 2rem;
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width:850px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+
+    .header-paragraph {
+        display: none;
+    }
+
+    .popular-tours-heading {
+        font-size: 5rem;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-link {
+        margin: 1rem 0;
+    }
+}
+
+@media(max-width:600px) {
+    .container {
+        margin: 0;
+    }
+
+    .open-navbar-icon {
+        top: 2.5rem;
+        left: 2.5rem;
+    }
+
+    .close-navbar-icon {
+        right: 2.5rem;
+    }
+
+    .navbar-wrapper {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    .header {
+        height: 100vh;
+    }
+
+    .contact-heading {
+        font-size: 6rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+        height: 40rem;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 45%;
+    }
+}
