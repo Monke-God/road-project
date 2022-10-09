@@ -51,6 +51,11 @@ html {
     top: 6.5rem;
     left: 6.5rem;
     z-index: 200;
+    /* visibility: visible; */
+}
+
+.hamMenu .open-navbar-icon {
+    visibility: hidden;
 }
 
 .navbar-icon .line {
@@ -68,14 +73,19 @@ html {
     height: 25rem;
     background-color: rgba(255, 255, 255, .7);
     position: fixed;
-    top: -100%;
     left: 0;
+    top: -100%;
     transition: top 420ms;
     transition-timing-function: ease-in;
-    /* bottom: -100%; */
     opacity: 1;
     z-index: 300;
     padding: 3.5rem 5.5rem 3.5rem 3.5rem;
+}
+
+.hamMenu .navbar-wrapper {
+    top: 0;
+    transition: top 420ms;
+    transition-timing-function: cubic-bezier(0.39, 0.53, 0, 1.08);
 }
 
 .navbar {
@@ -86,17 +96,12 @@ html {
     position: relative;
 }
 
-.hamMenu {
-    top: 0;
-    transition: top 420ms;
-    transition-timing-function: cubic-bezier(0.39, 0.53, 0, 1.08);
-}
-
 .close-navbar-icon {
     position: absolute;
     top: 2.5rem;
-    right: 3rem;
+    left: 2.5rem;
     z-index: 300;
+    border: 2px solid #77777785;
 }
 
 .close-navbar-icon .line {
@@ -124,14 +129,41 @@ html {
     text-transform: uppercase;
     width: 100%;
     opacity: 0.8;
-    transition: all .3s;
     position: relative;
-    /* top: -100%; */
+    top: -200%;
+    transition: top 420ms .2s, opacity .2s, color .2s;
+    transition-timing-function: ease-out;
+}
+
+.hamMenu .navbar-wrapper .navbar .nav-list .nav-link {
+    top: 0;
 }
 
 .nav-link:hover {
     opacity: 1;
     color: var(--primary-color);
+}
+
+
+.hamMenu .nav-link:nth-child(1) {
+    transition: top 420ms .2s, opacity .2s, color .2s;
+    transition-timing-function: ease-out;
+}
+.hamMenu .nav-link:nth-child(2) {
+    transition: top 420ms .3s, opacity .3s, color .3s;
+    transition-timing-function: ease-out;
+}
+.hamMenu .nav-link:nth-child(3) {
+    transition: top 420ms .4s, opacity .3s, color .3s;
+    transition-timing-function: ease-out;
+}
+.hamMenu .nav-link:nth-child(4) {
+    transition: top 420ms .5s, opacity .3s, color .3s;
+    transition-timing-function: ease-out;
+}
+.hamMenu .nav-link:nth-child(5) {
+    transition: top 420ms .6s, opacity .3s, color .3s;
+    transition-timing-function: ease-out;
 }
 
 /* End of Navbar */
